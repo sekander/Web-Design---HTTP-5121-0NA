@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP 5121- Lab 2</title>
+</head>
+
+<body>
+    <header>
+        <h2><a href="#">Fake Store</a></h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Cart</a></li>
+        </ul>
+        <ul>
+            <!-- <li style="list-style-type: none;">&nbsp;</li> -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="checkout">
+            <h1>Checkout Order #1234 - Billing and Payment</h1>
+            <p>Order total: $129.57</p>
+
+            <form action="/submit" method="POST">
+                <div id="billing_info">
+                    <fieldset>
+                        <legend>Billing Information</legend>
+                        <div>
+                            <label for="first_name">First name:</label>
+                            <input type="text" id="first_name" name="user_firstName" placeholder="John" required>
+                            <label for="last_name">Last name:</label>
+                            <input type="text" id="last_name" name="user_lastName" placeholder="Doe" required>
+                        </div>
+                        <div>
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="user_address" placeholder="123 Fake Street" required>
+                        </div>
+                        <div>
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="user_city" placeholder="Toronto" required>
+                            <label for="dropdown">Province:</label>
+                            <select id="dropdown" name="user_province" required>
+                                <option value="">Choose Option</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="ON">Ontario</option>
+                                <option value="QC">Quebec</option>
+                            </select>
+                            <label for="postal">Postal code:</label>
+                            <input type="text" id="postal" name="user_postal" placeholder="A1A 1A1" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone number:</label>
+                            <input type="text" id="phone" name="user_phone" placeholder="555-555-5555" required>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div id="payment_info">
+                    <fieldset>
+                        <legend>Payment Information</legend>
+                        <fieldset>
+                            <legend>Choose Card</legend>
+                            <div>
+                                <label>
+                                    <input type="radio" name="card_type" value="mastercard" required>
+                                    Master Card
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="card_type" value="visa" required>
+                                    Visa
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div>
+                            <label for="card">Card Number:</label>
+                            <input type="text" id="card" name="card" placeholder="1234 1234 1234 1234" required>
+                        </div>
+                        <div>
+                            <label for="expiry">Card expiry:</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div id="payment_process">
+                    <button type="submit">Pay now</button>
+                </div>
+            </form>
+    </main>
+    <footer>
+        <p>
+            &copy; Copyright HTTP5121, 2024
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
