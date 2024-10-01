@@ -1,0 +1,110 @@
+#flex-1,
+#flex-2 {
+    margin: 1em 0;
+    background-color: purple;
+
+}
+
+.item {
+    background-color: yellow;
+    padding: 30px;
+}
+
+/* FLEX 1 */
+#flex-1 {
+    max-width: 500px;
+    /* make this no wider than 500px */
+    height: 300px;
+
+    /* This is a flex container. What needs to be set? */
+    /* It's a row, displayed at the bottom, and spaced out. */
+
+    /* RULES ADDED */
+    display: flex;
+    /* Turns div fle-1 into a flex container*/
+    flex-direction: row;
+    /* Aligns child items in a horizontal row*/
+    align-items: flex-end;
+    /* Aligns all child items to the bottom of the container*/
+
+}
+
+/* flex stuff for the even items in #flex-1 here */
+
+/*RULE ADDED*/
+#flex-1 .item:nth-child(even) {
+    align-self: center;
+    /* Aligns even-numbered child items vertically in the centre of the flex container*/
+}
+
+/* FLEX 2 */
+#flex-2 {
+    padding: 1em;
+
+    /* This is a flex container. */
+    /* Set needed flex container properties here. */
+
+    /* RULE ADDED*/
+    display: flex;
+    /* Turns div flex-2 into a felx container*/
+    gap: 1.5em;
+    /* Adds a gap of 1.5em between child elements*/
+    flex-direction: row;
+    /* Aligns the child items in a horizontal row*/
+}
+
+.triple,
+.single {
+    padding: 1em;
+    background-color: yellow;
+}
+
+.triple {
+    /* This is a flex item. */
+    /* Use flex-basis and flex-grow so this is triple width. */
+    /* RULE ADDED */
+    flex-basis: 75%;
+    /*Sets the base of width of class triple to 75% of the container's width*/
+    flex-grow: 1em;
+    /* Controls how much the class triple item grows relative to others */
+}
+
+.single {
+    /* This is a flex item. */
+    /* Use flex-basis and flex-grow so it's single width. */
+
+    /* RULE ADDED */
+    flex-basis: 25%;
+    /* Sets the base width of class single to 25% of the container's width*/
+    flex-grow: 3em;
+    /* Controls how much the class single item grows relative to others */
+}
+
+#nested-flex {
+    background-color: #bfa0bf;
+    padding: 1em;
+
+    /* This is a flex container. */
+    /* RULE ADDED */
+    display: flex;
+    /* Turns div nested-flex into a flex container*/
+    flex-wrap: nowrap;
+    /* Prevents child items from wrapping onto a new line*/
+    gap: 10px;
+    /* Sets a gap of 10 pixels */
+    /* This row can break to a new line. */
+
+}
+
+.card {
+    background-color: orange;
+    height: 150px;
+    align-items: center;
+
+    /* This is a flex item. */
+    /* Cards have a default width of 100px (which flex item property--not width--to set the target width?) */
+
+    /* RULE ADDED */
+    flex-basis: 100px;
+    /* Sets the base width of class card to 100 pixels */
+}
